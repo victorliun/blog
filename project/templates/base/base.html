@@ -1,6 +1,64 @@
-<!DOCTYPE>
-<html>
+{% load url from future %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
   <head>
-  <title>Sheng's Weblog - {%block title %}{%endblock%}</title>
-  
+    <meta charset="utf-8" />
+    <title>{% block title %}{{ blog_config.title }}{% endblock %}</title>
+    {% if settings.DEBUG %}<meta http-equiv="pragma" content="no-cache"/>{% endif %}
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="{{ blog_config.meta_author }}">
+    <meta name="keywords" content="{{ blog_config.meta_keywords }}">
+    <meta name="description" content="{% block meta-description %}{{ blog_config.meta_description }}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{{ STATIC_URL }}css/style.css" rel="Stylesheet"/>
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="Stylesheet"/>
+    {% block extracss %}{% endblock %}
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    {% block extrajs %}{% endblock %}
+  </head>
+
+  <body>
+    <header id="mainhead">
+      <div class="logo">
+        <a href="/home"><img src="{{STATIC_URL}}images/logo.png"></a>
+      </div>
+      <div class="new">
+        <span>add</span>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="/home">Home</a>
+          </li>
+          <li>
+            <a href="/travel">Travel</a>
+          </li>
+          <li>
+            <a href="/tech">Tech</a>
+          </li>
+          <li>
+            <a href="/recipe">Recipe</a>
+          </li>
+          <li>
+            <a href="/brainstorm">Light</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {% block section%}{% endblock %}
+    
+    <footer>
+      <div class="foot">
+        <div class="contact-info">
+          victor.ns.liu@outlook.com - 027888888
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,13 +1,10 @@
-#This is the css for homepage.
-html {
-    color: yellow;
+section#home{
+    top:80px;
+    position: absolute;
+    width:100%;
+    text-align:center;
 }
 
-body {
-    color: purple;
-    font-color: red;
-}
-
-.body {
-    
+section#home h1{
+    color:darkcyan;
 }
