@@ -4,8 +4,23 @@
 <link href="{{STATIC_URL}}css/homepage.css" rel="Stylesheet"/>
 {%endblock%}
 
-{%block section %}
-<section id="home">
-  <h1>Welcome home</h1>
-</section>
+{%block extrajs%}
+<script type="text/javascript" src="{{STATIC_URL}}js/homepage.js"></script>
+{%endblock%}
+{%block content %}
+<div id="content">
+  <h1>Victor's Cosmos <span id="date_time"></span></h1>
+  <p>Let the you tommorrow appreciate what the you did today! </p>
+  <hr>
+  <div id="category">
+    <a id="travel" href="/travel"><img alt="Travel" src="{{ STATIC_URL }}images/travel.jpeg"/>
+    <div class="travel">Travel</div></a>
+    <a id="tech" href="/tech"><img alt="Tech" src="{{ STATIC_URL }}images/tech.jpeg"/>
+    <div class="tech">Tech</div></a>
+    <a id="recipe" href="/recipe"><img alt="Recipe" src="{{ STATIC_URL }}images/recipe.jpeg"/>
+    <div class="recipe">Recipe</div></a> 
+    <a id="light" href="/light"><img alt="Light" src="{{ STATIC_URL }}images/light.jpeg"/>
+    <div class="light">Light</div></a>
+  </div>
+</div>
 {% endblock %}

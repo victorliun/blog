@@ -1,10 +1,81 @@
-section#home{
-    top:80px;
-    position: absolute;
-    width:100%;
-    text-align:center;
+
+#content {
+    width: 600px;
+    margin: 40px auto 0 auto;
+    padding: 0 60px 30px 60px;
+    border: solid 1px #cbcbcb;
+    background: #fafafa;
+    -moz-box-shadow: 0px 0px 10px #cbcbcb;
+    -webkit-box-shadow: 0px 0px 10px #cbcbcb;
 }
 
-section#home h1{
-    color:darkcyan;
+h1 {
+    margin: 30px 0 15px 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+h1 span {
+    font-size: 50%;
+    letter-spacing: -0.05em;
+}
+
+hr {
+    border: none;
+    height: 1px; line-height: 1px;
+    background: #E5E5E5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 7px 0;
+}
+
+div#category {
+    margin:0px;
+    padding: 7px 0;
+}
+
+a {
+    outline: none;
+    position: relative;
+    text-decoration:initial;
+}
+
+a img, div.travel, div.tech, div.recipe, div.light {
+    border: 1px solid #BBB;
+    padding: 2px;
+    margin: 10px 60px 20px 30px;
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+}
+
+div.travel, div.tech, div.recipe, div.light {
+    top: 0px;
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+    font-size: x-large;
+    background-color: antiquewhite;
+    opacity: 0.8;
+    display:none;
+}
+
+a img.last {
+    margin-right: 0;
+}
+
+ul {
+    margin-bottom: 24px;
+    padding-left: 30px;
+}
+
+span#date_time {
+    float:right;
+    font-weight:400;
+    margin-right:20px;
 }

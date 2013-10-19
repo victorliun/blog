@@ -1,94 +1,10 @@
-#This is the css for homepage.
-html {
-    color: yellow;
+html, body, div, ul {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Cabin, Arial, sans-serif;
-    font-size: .875em;
-    line-height: 20px;
-    color: #2b2b2b;
-    background-color: #fff;
-    height: 100%;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: visible;
-}
-
-
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #fff;
-    border-bottom: 2px solid #7300BF;
-}
-
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.logo a img {
-    width:40px;
-    height: 40px;
-}
-
-.nav {
-    float:right;
-    width:625px;
-}
-
-.nav ul {
-    margin: 0;
-    clear: both;
-    float: right;
-    font-size: 12px;
-    height: 55px;
-    padding: 0;
-    position: relative;
-    width: 625px;
-    line-height: 1;
-    list-style: none outside none;
-}
-
-.nav ul li {
-    color: #000;
-    display: block;
-    float: left;
-    font-weight: 700;
-    width: 85px;
-    height: 30px;
-    padding: 20px 20px 0;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-div.new{
-    float:right;
-}
-
-footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    z-index: 90;
-}
-
-div.new {
-    float:right;
-    padding-top: 16px;
-    height: 30px;
-    padding-right: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: blue;
+    color: #262626;
+    background: #f4f4f4;
+    font: normal 12px/18px Verdana, sans-serif;
 }
