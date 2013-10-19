@@ -1,14 +1,16 @@
 from django.db import models
 from django.utils import timezone
+
+from lxml import etree
 # Create your models here.
 
 class Article(models.Model):
     """Model for table article"""
     
-    TRAVEL = 'tl'
-    RECIPE = 'rp'
-    LIGHT = 'lt'
-    TECH = 'th'
+    TRAVEL = 'travel'
+    RECIPE = 'recipe'
+    LIGHT = 'light'
+    TECH = 'tech'
     CATEGORY_CHOICE = ((TRAVEL, "Travel"), 
                     (RECIPE, "Recipe"), 
                     (LIGHT, "Light"), 
@@ -32,3 +34,18 @@ class Article(models.Model):
         """Outputs some useful information for this instance"""
         
         return u"%s in %s in %s" % (self.title, self.category, self.creation_time)
+
+    def parseXML(self):
+        """parses xml file"""
+        
+        content = {}
+        root = etree.parse(self.xml_path)
+        content['paras'] = []
+        for para in root.findall(".//p"):
+            content['paras'].append(para.text)
+        
+        content['images'] = []
+        for img in root.findall(".//image"):
+            content['images'].append(etree.tostring(img))
+
+        return content
