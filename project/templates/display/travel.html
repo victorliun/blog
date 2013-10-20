@@ -1,19 +1,20 @@
 {% extends "base/base.html"%}
 
 {%block extracss%}
-<link href="{{STATIC_URL}}css/homepage.css" rel="Stylesheet"/>
+<link href="{{STATIC_URL}}css/travel.css" rel="Stylesheet"/>
 {%endblock%}
 
 {%block extrajs%}
 <script type="text/javascript" src="{{STATIC_URL}}js/homepage.js"></script>
 {%endblock%}
-
 {%block section%}
+<div>
 {{id}}
 {{ article.title }}
 {{ article.category }}
 {% for para in section.paras %}
   <p>{{ para }}</p>
 {% endfor %}
-{{ section.images.0 }}
+{{ section.images.0 | safe}}
+</div>
 {%endblock%}

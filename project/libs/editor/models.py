@@ -45,7 +45,7 @@ class Article(models.Model):
             content['paras'].append(para.text)
         
         content['images'] = []
-        for img in root.findall(".//image"):
+        for img in root.findall(".//img"):
             content['images'].append(etree.tostring(img))
 
         return content

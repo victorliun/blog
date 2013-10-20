@@ -8,3 +8,79 @@ body {
     background: #f4f4f4;
     font: normal 12px/18px Verdana, sans-serif;
 }
+
+
+div#dashboard {
+    position: fixed;
+    padding: 10px;
+    border: solid 1px #cbcbcb;
+    background: #fafafa;
+    -moz-box-shadow: 0px 0px 10px #cbcbcb;
+    -webkit-box-shadow: 0px 0px 10px #cbcbcb;
+    left:50%;
+    margin-left:-290px;
+    bottom: 44px;
+    display:none;
+}
+
+div#triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 20px 0 20px;
+    border-color: #D6D1D1 transparent transparent transparent;
+    position: fixed;
+    bottom: 34px;
+    left: 50%;
+    margin-left: -20px;
+    display:none;
+}
+
+#dashboard a {
+    outline: none;
+    position: relative;
+    text-decoration:initial;
+}
+
+#dashboard a img, div.travel, div.tech, div.recipe, div.light {
+    border: 1px solid #BBB;
+    padding: 2px;
+    margin: 5px 15px 10px 15px;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+}
+
+#dashboard div.travel, div.tech, div.recipe, div.light {
+    top: 0px;
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+    font-size: x-large;
+    background-color: antiquewhite;
+    opacity: 0.8;
+    display:none;
+}
+
+a img.last {
+    margin-right: 0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    border-top: 2px solid #00aebf;
+}
+
+div.homeicon {
+    text-align: center;
+    height: 32px;
+}
+
+div.homeicon img{
+    width:32px;
+}

@@ -16,13 +16,24 @@
     <link href="{{ STATIC_URL }}css/jquery-ui/1.10.3/themes/smoothness/jquery-ui.css" rel="Stylesheet"/>
     {% block extracss %}{% endblock %}
 
-    <!--script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script-->
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery/1.10.3/jquery.min.js"></script-->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery/1.10.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script>
     {% block extrajs %}{% endblock %}
   </head>
-
+{%block body%}
   <body>
+    <div id="dashboard">
+      <a id="travel" href="/travel"><img alt="Travel" src="{{ STATIC_URL }}images/travel.jpeg"/>
+        <div class="travel">Travel</div></a>
+      <a id="tech" href="/tech"><img alt="Tech" src="{{ STATIC_URL }}images/tech.jpeg"/>
+        <div class="tech">Tech</div></a>
+      <a id="recipe" href="/recipe"><img alt="Recipe" src="{{ STATIC_URL }}images/recipe.jpeg"/>
+        <div class="recipe">Recipe</div></a> 
+      <a id="light" href="/light"><img alt="Light" src="{{ STATIC_URL }}images/light.jpeg"/>
+        <div class="light">Light</div></a>
+    </div>
+    <div id="triangle"></div>
     {% block content %}
     <header id="mainhead">
       <div class="logo">
@@ -55,12 +66,11 @@
     {% block section%}{% endblock %}
     
     <footer>
-      <div class="foot">
-        <div class="contact-info">
-          victor.ns.liu@outlook.com - 027888888
-        </div>
+      <div class="homeicon">
+        <img src="{{STATIC_URL}}images/home.png" alt="home"/>
       </div>
     </footer>
     {% endblock %}
   </body>
+{% endblock %}
 </html>
