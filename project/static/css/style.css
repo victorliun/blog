@@ -21,6 +21,7 @@ div#dashboard {
     margin-left:-290px;
     bottom: 44px;
     display:none;
+    width:556px;
 }
 
 div#triangle {
@@ -55,8 +56,8 @@ div#triangle {
     top: 0px;
     position: absolute;
     text-align: center;
-    line-height: 200px;
-    font-size: x-large;
+    line-height: 100px;
+    font-size: large;
     background-color: antiquewhite;
     opacity: 0.8;
     display:none;
@@ -83,4 +84,21 @@ div.homeicon {
 
 div.homeicon img{
     width:32px;
+    margin-right: -180px;
+}
+
+div.main {
+    width: 660px;
+    margin: 40px auto 0 auto;
+    padding: 30px 60px 30px 60px;
+    border: solid 1px #cbcbcb;
+    background: #fafafa;
+    -moz-box-shadow: 0px 0px 10px #cbcbcb;
+    -webkit-box-shadow: 0px 0px 10px #cbcbcb;
+}
+
+#date_time {
+    float: right;
+    line-height: 32px;
+    margin-right: 10px;
 }

@@ -1,5 +1,4 @@
-jQuery.fn.extend({ 
-    date_time:function() {
+    function date_time(id) {
         date = new Date;
         year = date.getFullYear();
         month = date.getMonth();
@@ -10,32 +9,41 @@ jQuery.fn.extend({
         h = date.getHours();
         if(h<10)
         {
-                h = "0"+h;
+            h = "0"+h;
         }
         m = date.getMinutes();
         if(m<10)
         {
-                m = "0"+m;
+            m = "0"+m;
         }
         s = date.getSeconds();
         if(s<10)
         {
-                s = "0"+s;
+            s = "0"+s;
         }
         result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
-        jQuery(this).html(result);
-        //setTimeout('jQuery(this).date_time()','1000');
+        jQuery(id).html(result);
+        setTimeout(function(){date_time(id)},'1000');
         return true;
-    },
+    }
 
-    category_hover:function(){
-        jQuery(this).each(function(){
+jQuery(document).ready(function(){
+        jQuery("#category img, #dashboard img").each(function(){
             var showtext = jQuery(this).attr("alt");
             jQuery(this).parent().hover(function(){
                 jQuery("div."+showtext.toLowerCase()).show();
             },function(){
                 jQuery("div."+showtext.toLowerCase()).hide();
             });
-        });        
-    }
-});
+        });
+    
+    jQuery("div.homeicon img").hover(function(){
+        jQuery("#dashboard, #triangle").show();
+    }, function(){});
+    
+    jQuery("div#dashboard").hover(function(){},function(){
+        jQuery(this).hide();
+        jQuery("#triangle").hide();
+    });
+    
+})

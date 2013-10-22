@@ -35,7 +35,7 @@
     </div>
     <div id="triangle"></div>
     {% block content %}
-    <header id="mainhead">
+    <!--header id="mainhead">
       <div class="logo">
         <a href="/home"><img src="{{STATIC_URL}}images/logo.png"></a>
       </div>
@@ -61,12 +61,13 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header -->
 
     {% block section%}{% endblock %}
     
     <footer>
       <div class="homeicon">
+        <span id="date_time"></span>
         <img src="{{STATIC_URL}}images/home.png" alt="home"/>
       </div>
     </footer>
