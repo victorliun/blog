@@ -13,8 +13,10 @@
 {{ article.title }}
 {{ article.category }}
 {% for para in section.paras %}
-  <p>{{ para }}</p>
+  <p>{{ para.txt }}</p>
+  {%for img in para.images %}
+    {{ img | safe}}
+  {%endfor%}
 {% endfor %}
-{{ section.images.0 | safe}}
 </div>
 {%endblock%}

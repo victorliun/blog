@@ -24,6 +24,7 @@
 {%block body%}
   <body>
     <div id="dashboard">
+      <div id="links">
       <a id="travel" href="/travel"><img alt="Travel" src="{{ STATIC_URL }}images/travel.jpeg"/>
         <div class="travel">Travel</div></a>
       <a id="tech" href="/tech"><img alt="Tech" src="{{ STATIC_URL }}images/tech.jpeg"/>
@@ -32,8 +33,10 @@
         <div class="recipe">Recipe</div></a> 
       <a id="light" href="/light"><img alt="Light" src="{{ STATIC_URL }}images/light.jpeg"/>
         <div class="light">Light</div></a>
-    </div>
+      </div>
     <div id="triangle"></div>
+    </div>
+
     {% block content %}
     <!--header id="mainhead">
       <div class="logo">
@@ -68,7 +71,11 @@
     <footer>
       <div class="homeicon">
         <span id="date_time"></span>
-        <img src="{{STATIC_URL}}images/home.png" alt="home"/>
+        <div id="shortcuts">
+          <img src="{{STATIC_URL}}images/search.jpg" alt="search" id="search_icon"/>
+          <img src="{{STATIC_URL}}images/home.png" alt="home" id="home_icon"/>
+          <img src="{{STATIC_URL}}images/plus.jpg" alt="plus" id="new_article"/>
+        </div>
       </div>
     </footer>
     {% endblock %}

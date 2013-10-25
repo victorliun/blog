@@ -37,13 +37,17 @@ jQuery(document).ready(function(){
             });
         });
     
-    jQuery("div.homeicon img").hover(function(){
-        jQuery("#dashboard, #triangle").show();
-    }, function(){});
+    jQuery("div.homeicon img#home_icon").hover(function(){
+        jQuery("#dashboard").fadeIn(500);
+    }, function(){
+        jQuery("#dashboard").fadeOut(500);
+    });
     
-    jQuery("div#dashboard").hover(function(){},function(){
-        jQuery(this).hide();
-        jQuery("#triangle").hide();
+    jQuery("div#dashboard").hover(function(){
+        jQuery(this).stop().animate({opacity:'100'});
+//        jQuery(this).show();
+    },function(){
+        jQuery(this).fadeOut(500);
     });
     
 })

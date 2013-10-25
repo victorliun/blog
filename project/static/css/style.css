@@ -34,7 +34,6 @@ div#triangle {
     bottom: 34px;
     left: 50%;
     margin-left: -20px;
-    display:none;
 }
 
 #dashboard a {
@@ -84,7 +83,7 @@ div.homeicon {
 
 div.homeicon img{
     width:32px;
-    margin-right: -180px;
+    margin-right: -75px;
 }
 
 div.main {
@@ -101,4 +100,9 @@ div.main {
     float: right;
     line-height: 32px;
     margin-right: 10px;
+}
+
+#shortcuts {
+    position: absolute;
+    margin-left: 594px;
 }

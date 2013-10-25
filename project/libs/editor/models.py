@@ -40,12 +40,13 @@ class Article(models.Model):
         
         content = {}
         root = etree.parse(self.xml_path)
-        content['paras'] = []
-        for para in root.findall(".//p"):
-            content['paras'].append(para.text)
-        
-        content['images'] = []
-        for img in root.findall(".//img"):
-            content['images'].append(etree.tostring(img))
+#        content['paras'] = []
+#        for para in root.findall(".//p"):
+#            content['paras'].append(para.text)
+#        
+#        content['images'] = []
+#        for img in root.findall(".//img"):
+#            content['images'].append(etree.tostring(img))
 
+        content['section'] = etree.tostring(root.find('section'))
         return content
