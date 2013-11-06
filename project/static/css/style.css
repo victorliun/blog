@@ -11,17 +11,21 @@ body {
 
 
 div#dashboard {
-    position: fixed;
-    padding: 10px;
-    border: solid 1px #cbcbcb;
-    background: #fafafa;
-    -moz-box-shadow: 0px 0px 10px #cbcbcb;
-    -webkit-box-shadow: 0px 0px 10px #cbcbcb;
-    left:50%;
-    margin-left:-290px;
-    bottom: 44px;
+#    position: fixed;
+#    padding: 10px;
+#    border: solid 1px #cbcbcb;
+#    background: #fafafa;
+#    -moz-box-shadow: 0px 0px 10px #cbcbcb;
+#    -webkit-box-shadow: 0px 0px 10px #cbcbcb;
+#    left:50%;
+#    margin-left:-290px;
+#    bottom: 44px;
     display:none;
-    width:556px;
+#    width:556px;
+}
+
+div#new_article {
+    display:none;
 }
 
 div#triangle {
@@ -34,6 +38,7 @@ div#triangle {
     bottom: 34px;
     left: 50%;
     margin-left: -20px;
+    display:none;
 }
 
 #dashboard a {

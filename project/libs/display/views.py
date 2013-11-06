@@ -4,11 +4,12 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.conf import settings
 from libs.editor.models import Article
+from libs.editor.forms import ArticleForm
 
 class DisplayView(TemplateView):
     "displays single article"
     
-    template_name = "display/travel.html"
+    template_name = "display/travel.jade"
     
     def get_context_data(self, **kwargs):
         """Populate all context of the template with all setting configures"""
@@ -21,6 +22,7 @@ class DisplayView(TemplateView):
         article = Article.objects.get(pk=context['id'])
         context['article'] = article
         context['section'] = article.parseXML()
+        context['form'] = ArticleForm()
 
         return context
 

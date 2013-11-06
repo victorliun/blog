@@ -95,6 +95,11 @@ SECRET_KEY = '_7$yju@v1l&t@uq#9bncmfiyfbx_+znqjnz7fi$bg29u3^j%p#'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    ('pyjade.ext.django.Loader',(
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+        'django.template.loaders.eggs.Loader',
+    )),
 #     'django.template.loaders.eggs.Loader',
 )
 TEMPLATE_CONTEXT_PROCESSORS = (

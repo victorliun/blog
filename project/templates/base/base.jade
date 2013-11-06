@@ -1,0 +1,28 @@
+!!! 5
+{% load url from future %}
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        title
+            block title
+                {{blog_config.title}}
+        link(href="{{STATIC_URL}}css/style.css", ref="stylesheet")
+        block extracss
+        block extrajs
+        
+    block body 
+        body
+            #dashboard
+                a#traval(href="/travel")
+                    img(alt="Travel", src="{{STATIC_URL}}images/travel.jpeg")
+
+            article
+                header  
+                    h1 About Me
+                :markdown
+                    This is a page about me.  Be sure to check
+                    out my [Facebook Profile][1] where I post lots
+                    of crazy pictures!
+
+                    [1]: http://facebook.com/dustinfarris
+            block section

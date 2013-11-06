@@ -1,0 +1,12 @@
+extends base/base
+block extracss
+    link(href="{{STATIC_URL}}css/travel.css", rel="stylesheet")
+    
+block extrajs
+    script(type="text/javascript", src="{{STATIC_URL}}js/homepage.js")
+
+block section
+    .main
+    {{ id }}
+    {{ article.title }}
+    
