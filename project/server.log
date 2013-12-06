@@ -1,0 +1,50 @@
+*** Starting uWSGI 1.9.17.1 (64bit) on [Mon Nov 25 20:54:41 2013] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79) on 12 November 2013 18:07:33
+os: Darwin-13.0.0 Darwin Kernel Version 13.0.0: Thu Sep 19 22:22:27 PDT 2013; root:xnu-2422.1.72~6/RELEASE_X86_64
+nodename: LiuNianshengs-MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /Users/Victor/Public/www/rainbow/blog/project
+detected binary path: /Users/Victor/Public/www/rainbow/blog/env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:3031 fd 3
+Python version: 2.7.5 (default, Aug 25 2013, 00:04:04)  [GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)]
+Python main interpreter initialized at 0x7f8153e007b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145552 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /Users/Victor/Public/www/rainbow/ to pythonpath.
+added /Users/Victor/Public/www/rainbow/blog/ to pythonpath.
+ImportError: No module named django_wsgi
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 18351)
+spawned uWSGI worker 1 (pid: 18352, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 1.9.17.1 (64bit) on [Mon Nov 25 20:58:19 2013] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79) on 12 November 2013 18:07:33
+os: Darwin-13.0.0 Darwin Kernel Version 13.0.0: Thu Sep 19 22:22:27 PDT 2013; root:xnu-2422.1.72~6/RELEASE_X86_64
+nodename: LiuNianshengs-MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /Users/Victor/Public/www/rainbow/blog/project
+detected binary path: /Users/Victor/Public/www/rainbow/blog/env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:3031).
+bind(): Address already in use [core/socket.c line 763]
