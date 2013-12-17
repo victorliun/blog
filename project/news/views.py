@@ -11,13 +11,3 @@ def month_archive(request, year, month):
     a_list = Article.objects.filter(pub_date__year=year, pub_date__month=month)
 
     return render_to_response('news/year_archive.html', {'year': year, 'month':month, 'article_list': a_list})
-
-def articale_detail(request, year, month, day):
-    """
-    ...
-    """
-    pass
-    
-
-def mainpage(request):
-    pass

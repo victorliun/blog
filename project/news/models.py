@@ -12,7 +12,7 @@ class Reporter(models.Model):
         app_label = "news"
         db_table = "reporter"
         managed = True
-
+    
 class Article(models.Model):
     pub_date = models.DateField(db_column="publish_date")
     headline = models.CharField(db_column="headline", max_length=200)
@@ -26,3 +26,4 @@ class Article(models.Model):
         app_label = "news"
         db_table = "articles"
         managed = True
+            

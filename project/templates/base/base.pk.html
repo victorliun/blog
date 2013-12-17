@@ -13,8 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="{{ STATIC_URL }}css/normalize.css" rel="Stylesheet"/>
-    <!--link href="{{ STATIC_URL }}css/site.css" rel="Stylesheet"/-->
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site.media.css" media="only screen and (min-width:400px;)">
+    <link href="{{ STATIC_URL }}css/site.css" rel="Stylesheet"/>
     <link href="{{ STATIC_URL }}css/jquery-ui/1.10.3/themes/smoothness/jquery-ui.css" rel="Stylesheet"/>
     {% block extracss %}{% endblock %}
 
@@ -28,13 +27,15 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}js/fancybox-2.1.5/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
     <script type="text/javascript" src="{{ STATIC_URL}}js/fancybox-2.1.5/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
     <script type="text/javascript" src="{{ STATIC_URL}}js/fancybox-2.1.5/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-    {% block extrajs %}{% endblock %}
 
+    <!-- tinyMCE -->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tinymce-4.0.9/tinymce.min.js?v=4.0.9"></script>
+    {% block extrajs %}{% endblock %}
   </head>
   <body>
+    <!--
     <header>
-      <div class="site_logo"><a href="/home"><img src="{{STATIC_URL}}images/sitelogo.png"/></a></div>
-      <div></div>
+      <div class="site_logo"><a href="/home"><img src="{{STATIC_URL}}images/sitelogo.png" width="60px" heigh="60px"/></a></div>
       <nav class="navigator">
         <ul>
           <li id="home"><a href="/home">Home</a></li>
@@ -44,30 +45,32 @@
           <li id="recepe"><a href="/recepe">Recepe</a></li>
         </ul>
       </nav>
-    </header>
-    {% block content %}
-    <section id="container">
-      <article id="article_id" class="articles">
-        <header>article title</header>
-        <div class="article_brief">This Article talks about travel experience to Christchurch</div>
-      </article>
-      <article id="article_id" class="articles">
-        <header>article title</header>
-        <div class="article_brief">This Article talks about travel experience to Christchurch</div>
-      </article>
-      <article id="article_id" class="articles">
-        <header>article title</header>
-        <div class="article_brief">This Article talks about travel experience to Christchurch</div>
-      </article>
-      
-    </section>
-    <aside id="calendar_view">
-      <div class="calendar">calendar</div>
-    </aside>
-    <aside id="tags">Tags here</aside>
-    <aside id="table_of_content">Contents</aside>
-    {% endblock %}
-    <footer id="page_foot">
+    </header -->
+    <div id="dashboard">
+      <div id="links">
+      <a id="travel" href="/travel"><img alt="Travel" src="{{ STATIC_URL }}images/travel.jpeg"/>
+        <div class="travel">Travel</div></a>
+      <a id="tech" href="/tech"><img alt="Tech" src="{{ STATIC_URL }}images/tech.jpeg"/>
+        <div class="tech">Tech</div></a>
+      <a id="recipe" href="/recipe"><img alt="Recipe" src="{{ STATIC_URL }}images/recipe.jpeg"/>
+        <div class="recipe">Recipe</div></a> 
+      <a id="light" href="/light"><img alt="Light" src="{{ STATIC_URL }}images/light.jpeg"/>
+        <div class="light">Light</div></a>
+      </div>
+    <div id="triangle"></div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <!--div id="new_article">
+      <form action="/edit/{{article_id}}" method="post">
+        {{ form.as_p }}
+        <p> <lable>Content:</lable><textarea name="content" id="ar_text"></textarea></p>
+        <input type="submit" value="submit"/>
+      </form>
+    </div -->
+
+    <footer>
       <div class="homeicon">
         <span id="date_time"></span>
         <div id="shortcuts">
@@ -77,5 +80,9 @@
         </div>
       </div>
     </footer>
-    </body>
+    <!--footer>
+      <p>This is my public website. Hope you enjoy here.</p>
+      <address>Any advice will be appriciated, please email me at <a href="mailto:victor.ns.liu@outlook.com">victor.ns.liu@outlook.com</a></address>
+    </footer -->
+  </body>
 </html>

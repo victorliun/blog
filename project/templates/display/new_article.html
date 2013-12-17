@@ -1,11 +1,13 @@
 {% extends "base/base.html"%}
 
 {%block extracss%}
-<link href="{{STATIC_URL}}css/travel.css" rel="Stylesheet"/>
+<link href="{{STATIC_URL}}css/new_article.css" rel="Stylesheet"/>
 {%endblock%}
 
 {%block extrajs%}
-<script type="text/javascript" src="{{STATIC_URL}}js/homepage.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}js/new_article.js"></script>
+<!-- tinyMCE -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/tinymce-4.0.9/tinymce.min.js?v=4.0.9"></script>
 {%endblock%}
 {%block content%}
 <div class="main">

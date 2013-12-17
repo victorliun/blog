@@ -1,6 +1,6 @@
 
 #content {
-    width: 600px;
+    width: 808px;
     margin: 40px auto 0 auto;
     padding: 0 60px 30px 60px;
     border: solid 1px #cbcbcb;
@@ -48,7 +48,7 @@ a {
 a img, div.travel, div.tech, div.recipe, div.light {
     border: 1px solid #BBB;
     padding: 2px;
-    margin: 10px 60px 20px 30px;
+    margin: 10px 30px 20px 30px;
     vertical-align: top;
     width: 200px;
     height: 200px;

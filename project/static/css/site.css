@@ -111,3 +111,10 @@ div.main {
     position: absolute;
     margin-left: 594px;
 }
+
+/***
+ * Simply apply class="clearfix" to the elements cantaining the floats.
+ ***/
+.clearfix:before, .clearfix:after {content: "", display: table;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
