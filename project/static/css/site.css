@@ -1,8 +1,5 @@
-html, body, div, ul {
-    margin: 0;
-    padding: 0;
-}
-
+/***
+*old style
 body {
     color: #262626;
     background: #f4f4f4;
@@ -111,7 +108,160 @@ div.main {
     position: absolute;
     margin-left: 594px;
 }
+*/
+/***
+ *This CSS file define the style of page head and foot.
+ ***/
 
+body {
+    background: ghostwhite;
+    font-family: fantasy;
+}
+
+header {
+
+}
+
+#site_head {
+    width: 100%;
+    height: 72px;
+    background: lavender;
+    background: -webkit-gradient(linear,0 0,0 bottom,from(ghostwhite),to(lavender));
+    background: -moz-linear-gradient(top,ghostwhite,lavender);
+    background: -o-linear-gradient(top,ghostwhite,lavender);
+    position: fixed;
+    top: 0;
+    z-index: 800;
+}
+
+.width960 {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.animate_delay1s {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.site_logo {
+    background-color: chocolate;
+    width: 42px;
+    height: 38px;
+    margin: 8px 10px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    float: left;
+    padding: 5px 0;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 5px #66666;
+    -moz-box-shadow: 2px 2px 5px #66666;
+    box-shadow: 2px 2px 5px #66666;
+}
+
+.site_logo img {
+    width: 36px;
+    height: 36px;
+}
+
+#site_title {
+    font-size: 24px;
+    line-height: 32px;
+    text-shadow: 2px 2px 5px #999;
+    margin: 20px 0;
+    text-transform: uppercase;
+    float: left;
+}
+
+.multiple_text_shadow {
+    text-shadow: 2px 2px 0 rgba(175, 166, 166, 1), 6px 6px 0 rgba(50, 50, 50, 0.25);
+}
+
+.navigation {
+    float: right;
+}
+
+.navigation ul {
+    margin: 0;
+    clear: both;
+    float: right;
+    font-size: 16px;
+    height: 55px;
+    padding: 0;
+    position: relative;
+    width: 652px;
+    line-height: 36px;
+    list-style: none outside none;
+}
+
+.navigation ul li {
+    color: ghostwhite;
+    display: block;
+    float: left;
+    font-weight: 700;
+    width: 85px;
+    height: 30px;
+    padding: 20px 20px 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#container {
+    width: 680px;
+    margin: 100px auto 0;
+    padding: 30px 60px 30px 60px;
+    border: solid 1px lavender;
+    background: ghostwhite;
+    -moz-box-shadow: 0px 0px 10px lavender;
+    -webkit-box-shadow: 0px 0px 10px lavender;
+}
+
+#site_foot {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 5px;
+}
+
+#email_addr {
+    display: inline-block;
+    background: lavender;
+    -webkit-box-shadow: -2px -2px 5px lavender, 2px 0px 5px lavender;
+    -moz-box-shadow: -2px -2px 5px lavender, 2px 0px 5px lavender;
+    box-shadow: -2px -2px 5px lavender, 2px 0px 5px lavender;
+}
+
+aside {
+    position: fixed;
+    top: 160px;
+    right: 32px;
+}
+
+#calendar_view {
+    display: block;
+    border: 1px solid lavender;
+    top: 380px;
+}
+
+#tags {
+    display: block;
+    border: 1px solid lavender;
+    top: 280px;
+}
+
+#table_of_content {
+    display: block;
+    border: 1px solid lavender;
+}
+
+address {
+    display: inline;
+}
 /***
  * Simply apply class="clearfix" to the elements cantaining the floats.
  ***/

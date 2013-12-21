@@ -12,8 +12,10 @@
     <meta name="description" content="{% block meta_description %}{{ blog_config.meta_description }}{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/siteico.png">
+    <link rel="apple-touch-icon" type="image/png" href="{{ STATIC_URL }}images/apple_touch_logo.png">
     <link href="{{ STATIC_URL }}css/normalize.css" rel="Stylesheet"/>
-    <!--link href="{{ STATIC_URL }}css/site.css" rel="Stylesheet"/-->
+    <link href="{{ STATIC_URL }}css/site.css" rel="Stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site.media.css" media="only screen and (min-width:400px;)">
     <link href="{{ STATIC_URL }}css/jquery-ui/1.10.3/themes/smoothness/jquery-ui.css" rel="Stylesheet"/>
     {% block extracss %}{% endblock %}
@@ -32,18 +34,20 @@
 
   </head>
   <body>
-    <header>
-      <div class="site_logo"><a href="/home"><img src="{{STATIC_URL}}images/sitelogo.png"/></a></div>
-      <div></div>
-      <nav class="navigator">
-        <ul>
-          <li id="home"><a href="/home">Home</a></li>
-          <li id="travel"><a href="/travel">Travel</a></li>
-          <li id="tech"><a href="/tech">Tech</a></li>
-          <li id="light"><a href="/light">Light</a></li>
-          <li id="recepe"><a href="/recepe">Recepe</a></li>
-        </ul>
-      </nav>
+    <header id="site_head">
+      <div class="width960">
+        <div class="site_logo clearfix"><a href="/home"><img src="{{STATIC_URL}}images/sitelogo.png"/></a></div>
+        <h1 id="site_title">Blog Of <span class="multiple_text_shadow">Memory</span></h1>
+        <nav class="navigation">
+          <ul>
+            <li id="home"><a href="/home">Home</a></li>
+            <li id="travel"><a href="/travel">Travel</a></li>
+            <li id="tech"><a href="/tech">Tech</a></li>
+            <li id="light"><a href="/light">Light</a></li>
+            <li id="recepe"><a href="/recepe">Recepe</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     {% block content %}
     <section id="container">
@@ -67,15 +71,12 @@
     <aside id="tags">Tags here</aside>
     <aside id="table_of_content">Contents</aside>
     {% endblock %}
-    <footer id="page_foot">
-      <div class="homeicon">
-        <span id="date_time"></span>
-        <div id="shortcuts">
-          <img src="{{STATIC_URL}}images/search.jpg" alt="search" id="search_icon"/>
-          <a href="#dashboard" class="fancybox_dash"><img src="{{STATIC_URL}}images/home.png" alt="home" id="home_icon"/></a>
-          <a href="#new_article" class="fancybox_new"><img src="{{STATIC_URL}}images/plus.jpg" alt="plus" id="new_article"/></a>
-        </div>
+
+    <footer id="site_foot">
+      <div class="width960">
+        <div class="social_links"></div>
+        <div id="email_addr"><span>Any advice will be appriciated. </span><address>Email me at <a href="mailto:victor.ns.liu@outlook.com">victor.ns.liu@outlook.com</a></address></div>
       </div>
     </footer>
-    </body>
+  </body>
 </html>
