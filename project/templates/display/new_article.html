@@ -11,14 +11,10 @@
 {%endblock%}
 {%block content%}
 <div class="main">
-{{id}}
-{{ article.title }}
-{{ article.category }} {{MEDIA_URL}} {{MEDIA_ROOT}}{{INSTALL_APPS}}
-{% for para in section.paras %}
-  <p>{{ para.txt }}</p>
-  {%for img in para.images %}
-    {{ img | safe}}
-  {%endfor%}
-{% endfor %}
+  <form auction="" method="post">
+  	{% csrf_token %} 
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
 </div>
 {%endblock%}

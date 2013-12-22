@@ -23,6 +23,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery/1.10.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/common.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.lavalamp-1.4.js"></script>
 
     <!--Fancybox, Optionally add helpers - button, thumbnail and/or media -->
     <script type="text/javascript" src="{{ STATIC_URL }}js/fancybox-2.1.5/source/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -40,7 +41,7 @@
         <h1 id="site_title">Blog Of <span class="multiple_text_shadow">Memory</span></h1>
         <nav class="navigation">
           <ul>
-            <li id="home"><a href="/home">Home</a></li>
+            <li id="home" class=".backLava"><a href="/home">Home</a></li>
             <li id="travel"><a href="/travel">Travel</a></li>
             <li id="tech"><a href="/tech">Tech</a></li>
             <li id="light"><a href="/light">Light</a></li>
@@ -49,8 +50,9 @@
         </nav>
       </div>
     </header>
-    {% block content %}
+
     <section id="container">
+    {% block content %}
       <article id="article_id" class="articles">
         <header>article title</header>
         <div class="article_brief">This Article talks about travel experience to Christchurch</div>
@@ -63,14 +65,14 @@
         <header>article title</header>
         <div class="article_brief">This Article talks about travel experience to Christchurch</div>
       </article>
-      
+    {% endblock %}
     </section>
+    
     <aside id="calendar_view">
       <div class="calendar">calendar</div>
     </aside>
     <aside id="tags">Tags here</aside>
     <aside id="table_of_content">Contents</aside>
-    {% endblock %}
 
     <footer id="site_foot">
       <div class="width960">

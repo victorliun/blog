@@ -262,6 +262,33 @@ aside {
 address {
     display: inline;
 }
+
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: chocolate;
+}
+
+
+.navigation li.backLava {
+    height: 5px !important;
+    left: 10px;
+    position: absolute;
+    top: 58px !important;
+    width: 1px !important;
+    border-style: solid;
+    border-width: 0 62px 9px 62px;
+    border-color: transparent transparent chocolate transparent;
+}
+
+/***
+.navigation li.selectedLava a {
+    color: chocolate;
+}
 /***
  * Simply apply class="clearfix" to the elements cantaining the floats.
  ***/

@@ -94,6 +94,8 @@ jQuery(document).ready(function(){
             initTinyMCE();
         }
     });
+
+    jQuery( '.navigation ul' ).lavaLamp({ startItem: 0 });
 });
 
 function initTinyMCE(){
