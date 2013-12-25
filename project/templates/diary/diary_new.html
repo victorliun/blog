@@ -1,0 +1,28 @@
+{% extends "base/base.html"%}
+
+
+{%block extracss%}
+<link href="{{STATIC_URL}}css/diary_new.css" rel="Stylesheet"/>
+{%endblock%}
+
+{%block extrajs%}
+<!-- tinyMCE -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/tinymce-4.0.9/tinymce.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/diary_new.js"></script>
+{% endblock %}
+
+{% block content %}
+<article>
+  <h2>Write a diary Now...</h2>
+	<form action="{% url "diary-new" %}" method="POST">
+	  {% csrf_token %}
+	  {{ form.as_p }}
+	  <p>
+       <textarea id="diary_content" name="diary_main"></textarea>
+	  </p>
+
+	  <input id="save_contact" type="submit" value="SAVE" />
+	  <button id="diary_preview">PREVIEW</button>
+	</form>
+</article>
+{% endblock %}

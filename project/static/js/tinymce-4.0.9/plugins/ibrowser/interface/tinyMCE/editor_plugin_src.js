@@ -45,11 +45,11 @@ ib = null;
 
 		getInfo : function() {
 			return {
-				longname :     'iFmup',
-                author :     'Oliver Leuyim Angel',
-                authorurl : 'http://dimworks.org',
-                infourl :     'http://dimworks.org',
-                version :     '0.1.1'
+				longname : 	'iBrowser',
+				author : 	'net4visions.com',
+				authorurl : 'http://net4visions.com',
+				infourl : 	'http://net4visions.com/ibrowser.html',
+				version : 	'1.4.0'
 			};
 		}
 	});

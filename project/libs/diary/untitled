@@ -1,0 +1,11 @@
+from django import forms
+
+from models import Diary
+
+class ArticleForm(forms.ModelForm):
+    """ Form for article"""
+
+    class Meta:
+        model = Diary
+        fields = ["title", "category"]
+

@@ -83,12 +83,12 @@
 		}		
 		//-------------------------------------------------------------------------
 		// open iBrowser dialog		
-		/* if (ib.isMSIE) { // IE
+		if (ib.isMSIE) { // IE
 			var rArgs = showModalDialog(ib.baseURL, wArgs, 'dialogHeight:500px; dialogWidth:580px; scrollbars: no; menubar: no; toolbar: no; resizable: no; status: no;');  
 			if (rArgs) { // returning from iBrowser (IE) and calling callback function				
 				iBrowser_callback('','',rArgs);
 			}
-		} else */ if (ib.isGecko || ib.isWebKit || ib.isMSIE) { // Gecko or WebKit 
+		} else if (ib.isGecko || ib.isWebKit ) { // Gecko or WebKit 
 			var wnd = window.open(ib.baseURL + '?editor=' + ib.editor + '&callback=iBrowser_callback', 'ibrowser', 'status=no, modal=yes, width=625, height=530');
 			wnd.dialogArguments = wArgs;
 		}
