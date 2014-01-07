@@ -25,6 +25,7 @@ function initTinyMCE(){
 
 jQuery(document).ready(function(){
 
-    initTinyMCE();
+    //initTinyMCE();
+    $( 'textarea#diary_content' ).ckeditor();
 
 })

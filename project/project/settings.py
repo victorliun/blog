@@ -149,8 +149,8 @@ INSTALLED_APPS = (
     'apps.homepage',
     'libs.editor',
     'libs.display',
-    'news',
-    'libs.diary',
+    'apps.diary',
+    'libs.ckeditor',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -203,3 +203,6 @@ LOGGING = {
         },
     }
 }
+
+CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
+

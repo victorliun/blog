@@ -11,9 +11,9 @@
 {%endblock%}
 {%block content%}
 <div class="main">
-  <h1>{{ diary.title }}</h1><span>on {{ diary.creation_time }}</span>
-  <p> {{ diary.category }}</p>
-
-  <section>{{ diary.readFromXML | safe }}</section> 
+  <h1>{{ diary.title }}</h1> 
+  <hr>
+  {{ diary.creation_time }}
+  {{ diary.readFromXML | safe }}
 </div>
 {%endblock%}

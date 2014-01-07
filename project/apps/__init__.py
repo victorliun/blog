@@ -1,0 +1,1 @@
+from diary.views import *
